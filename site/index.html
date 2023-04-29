@@ -1,4 +1,6 @@
 <a href="/.auth/login/aad">Login</a>
+
+<script>
 module.exports = async function (context, req) {
     const header = req.headers["x-ms-client-principal"];
     const encoded = Buffer.from(header, "base64");
@@ -10,3 +12,4 @@ module.exports = async function (context, req) {
       }
     };
   };
+</script>
